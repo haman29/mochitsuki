@@ -16,8 +16,11 @@
   <script src="https://cdn.firebase.com/libs/firepad/0.1.4/firepad-min.js"></script>
   <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
 
-  <script src="firepad-userlist.js"></script>
-  <script src="index.js"></script>
+  <script src="./lib/jsSHA-1.5.0/src/sha.js"></script>
+  <script src="./lib/jquery.cookie-1.4.1.min.js"></script>
+    <script src="./lib/common.js"></script>
+  <script src="./firepad-userlist.js"></script>
+  <script src="./index.js"></script>
   <link rel="stylesheet" href="firepad-userlist.css" />
 
   <!-- bootstrap  -->
@@ -30,7 +33,7 @@
        For demo purposes, we make firepad fill the entire browser. */
 
     #userlist {
-      position: absolute; left: 0; top: 0; bottom: 0; height: auto;
+      position: absolute; left: 0; top: 100px; bottom: 0; height: auto;
       width: 175px;
     }
     #firepad {
@@ -39,15 +42,22 @@
     .firepad {
       position: initial;
     }
+
+    .driver {
+        background: red;
+    }
+
   </style>
 </head>
 
 <body>
-  <div class="actions">
+<div class="actions">
     <button id="evaluate">Evaluate</button>
-  </div>
-  <div id="userlist"></div>
-  <div id="firepad"></div>
+    <button id="beADriver">be a Driver</button>
+</div>
+<div id="userlist"></div>
+<div id="firepad"></div>
+
 
 </body>
 </html>
