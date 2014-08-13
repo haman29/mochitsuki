@@ -12,15 +12,16 @@
     "url": "git://github.com/haman29/satori.git"
   },
   "dependencies": {
-    "express": "~>3",
-    "underscore": "~1.4.4",
     "async": "~0.1.22",
-    "request": "~2.16",
-    "rendr-handlebars": "0.0.5",
-    "rendr": "0.5.0-alpha07",
-    "debug": "*",
     "config": "0.4.x",
-    "js-yaml": "2.x.x"
+    "debug": "*",
+    "express": "~>3",
+    "firebase": "^1.0.19",
+    "js-yaml": "2.x.x",
+    "rendr": "0.5.0-alpha07",
+    "rendr-handlebars": "0.0.5",
+    "request": "~2.16",
+    "underscore": "~1.4.4"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
