@@ -117,7 +117,10 @@ var FirepadUserList = (function() {
       var colorDiv = elt('div', null, { 'class': 'firepad-userlist-color-indicator' });
       colorDiv.style.backgroundColor = color;
 
-      var nameDiv = elt('div', name || 'Guest', { 'class': 'firepad-userlist-name' });
+
+      var nameDisplay = elt('div', name || 'Guest', { 'class': 'firepad-userlist-name' });
+      var currentRoll = elt('div', self.currentRoll_, { 'class': 'firepad-userlist-name-roll'})
+      var nameDiv = elt('div', [nameDisplay, currentRoll]);
 
       var userDiv = elt('div', [ colorDiv, nameDiv ], { 'class': 'firepad-userlist-user' });
       userId2Element[userId] = userDiv;
