@@ -39,7 +39,7 @@
 .firepad-userlist-user {
   position: relative;
   margin: 3px 0;
-  height: 32px;
+  height: 46px;
   border-bottom: 1px solid #c9c9c9;
   padding-bottom: 5px;
 }
@@ -77,6 +77,14 @@ input.firepad-userlist-name-input {
   width: 300px; /* I'd rather it clip than wrap. */
   font-size: 9px;
   line-height: 11px;
+}
+
+.firepad-userlist-name-roll {
+  position: absolute;
+  left: 38px;
+  top: 34px;
+  width: 300px; /* I'd rather it clip than wrap. */
+  font-size: 15px;
 }
 
 .firepad-userlist-name {

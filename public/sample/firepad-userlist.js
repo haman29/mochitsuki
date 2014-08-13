@@ -1,10 +1,11 @@
 var FirepadUserList = (function() {
-  function FirepadUserList(ref, place, userId, displayName) {
+  function FirepadUserList(ref, firepad, place, userId, displayName) {
     if (!(this instanceof FirepadUserList)) {
-      return new FirepadUserList(ref, place, userId, displayName);
+      return new FirepadUserList(ref, firepad, place, userId, displayName);
     }
 
     this.ref_ = ref;
+    this.firepad_ = firepad;
     this.userId_ = userId;
     this.place_ = place;
     this.firebaseCallbacks_ = [];
@@ -19,6 +20,8 @@ var FirepadUserList = (function() {
         nameRef.set(self.displayName_);
       }
     });
+
+    this.currentRoll_ = this.firepad_.editor_.getReadOnly() ? 'Navigator' : 'Driver';
 
     this.userList_ = this.makeUserList_()
     place.appendChild(this.userList_);
@@ -84,7 +87,8 @@ var FirepadUserList = (function() {
       stopEvent(e);
     });
 
-    var nameDiv = elt('div', [nameInput, nameHint]);
+    var currentRoll = elt('div', this.currentRoll_, {class: 'firepad-userlist-name-roll'})
+    var nameDiv = elt('div', [nameInput, nameHint, currentRoll]);
 
     return elt('div', [ colorDiv, nameDiv ], { 'class': 'firepad-userlist-user' });
   };
