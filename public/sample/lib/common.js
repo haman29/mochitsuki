@@ -1,19 +1,11 @@
 
-function getDriver(ref) {
-    var driver;
+function isDriver(ref, userId, callback) {
     ref.once('value', function(snapshot) {
-        driver = snapshot.val().driver;
+        var driver = snapshot.val().driver;
+        callback(driver === userId);
     });
-    return driver;
-}
-
-function isDriver(ref, userId) {
-    var driver = getDriver(ref)
-    console.log('driver: '+  driver);
-    console.log('userId: '+  userId);
-    return (getDriver(ref) === userId);
 }
 
 function changeDriver(ref) {
-    ref.child('driver').set(getUserId());
+    ref.child('driver').set(satori.getUserId());
 }

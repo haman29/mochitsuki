@@ -104,13 +104,15 @@ var FirepadUserList = (function() {
         function updateChild(userSnapshot, prevChildName) {
             var userId = userSnapshot.name();
 
-            if (isDriver(self.ref_.parent(), userId)) {
-                self.firepad_.editor_.setReadOnly(false);
-                self.currentRoll_ = 'Driver';
-            } else {
-                self.firepad_.editor_.setReadOnly(true);
-                self.currentRoll_ = 'Navigator';
-            }
+            isDriver(self.ref_.parent(), userId,
+                function (flg) {
+                    if (flg) {
+                        self.firepad_.editor_.setReadOnly(false);
+                        self.currentRoll_ = 'Driver';
+                    } else {
+                        self.firepad_.editor_.setReadOnly(true);
+                        self.currentRoll_ = 'Navigator';
+                    }});
 
             var div = userId2Element[userId];
             if (div) {
