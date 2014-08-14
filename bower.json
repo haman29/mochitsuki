@@ -22,6 +22,7 @@
     "jsSHA": "1.5.0",
     "firebase": "1.0.19",
     "ace": "1.1.5",
-    "fontawesome": "~4.1.0"
+    "fontawesome": "~4.1.0",
+    "ace-builds": "~1.1.5"
   }
 }
