@@ -4,6 +4,7 @@ public/components/
 app/templates/compiledTemplates.js
 public/styles.css
 .DS_Store
+.idea
 npm-debug.log
 config/runtime.json
 *.swp
