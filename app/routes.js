@@ -5,4 +5,6 @@ module.exports = function(match) {
   match('users'       ,       'users#index');
   match('users/:login',       'users#show');
   match('users_lazy/:login',  'users#show_lazy');
+  match('rooms',              'rooms#index');
+  match('rooms/:room_key',    'rooms#show');
 };
