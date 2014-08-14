@@ -7,4 +7,5 @@ module.exports = function(match) {
   match('users_lazy/:login',  'users#show_lazy');
   match('rooms',              'rooms#index');
   match('rooms/:room_key',    'rooms#show');
+  match('chat',              'chat#index');
 };
