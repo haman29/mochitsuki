@@ -1,0 +1,21 @@
+{
+  "name": "mochitsuki",
+  "main": "index.js",
+  "version": "0.0.0",
+  "homepage": "https://github.com/haman29/mochitsuki",
+  "authors": [
+    "Kyohei Hamada <kyohei.hamada@gmail.com>"
+  ],
+  "description": "peer programming platform",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1"
+  }
+}
