@@ -1,1 +1,37 @@
-rooms/show.hbs
+<div class="main" style="height: 500px;">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="room">Room: #{room_name}</div>
+      <div class="clipboard">
+        URL:
+        <input type="text" value="#{room_url}">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-9">
+      editor
+      <div id="firepad"></div>
+    </div>
+    <div class="col-md-3">
+      <div id="userlist">
+        <div class="userlist-edit">
+          <i class="fa fa-edit"></i>
+        </div>
+        <div class="userlist-icon"></div>
+        <div class="userlist-name"></div>
+      </div>
+      <div class="menu">
+        <div class="col-md-6">
+          <button>しゃべる</button>
+        </div>
+        <div class="col-md-6">
+          <button>見る(32)</button>
+        </div>
+      </div>
+      <div id="chatbox">
+        chat
+      </div>
+    </div>
+  </div>
+</div>

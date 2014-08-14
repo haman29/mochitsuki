@@ -5,21 +5,24 @@
     <meta charset='utf-8'/>
     <title>Mochitsuki</title>
 
-    <link href="/styles.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="/components/bootstrap/dist/css/bootstrap.min.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="/components/fontawesome/css/font-awesome.min.css" media="screen" rel="stylesheet" type="text/css" />
   </head>
 
   <body class="">
-    <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <a class="brand" href="/">Motchituski</a>
-          <div class="nav-collapse collapse">
-            <ul class="nav">
-              <li class="active"><a href="/">Home</a></li>
-              <li class="active"><a href="/rooms">Rooms</a></li>
-            </ul>
-          </div>
-          <div class="loading-indicator">Loading&hellip;</div>
+    <div class="navbar navbar-inverse navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/">Motchituski</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="/">Home</a></li>
+            <li class="active"><a href="/rooms">Rooms</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="loading-indicator">Loading&hellip;</li>
+          </ul>
         </div>
       </div>
     </div>
